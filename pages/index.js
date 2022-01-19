@@ -5,11 +5,11 @@ import Line from '../components/Line';
 import Navbar from '../components/Navbar';
 import Project from '../components/Project';
 import Tech from '../components/Tech';
+import Layout from '../layout';
 
 export default function Home() {
   return (
-    <div className='relative bg-gradient-to-br from-dark-bg to-dark-secondary tracking-wider'>
-      <Navbar />
+    <Layout>
       <Hero />
       <Line />
       <About />
@@ -17,7 +17,6 @@ export default function Home() {
       <Tech />
       <Line />
       <Project />
-      <Footer />
-    </div>
+    </Layout>
   );
 }
