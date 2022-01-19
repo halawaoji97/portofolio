@@ -1,15 +1,30 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
 import PhotoProfil from '../public/img/Group 36.png';
 import Union from '../public/img/Union.png';
+import Close from '../public/img/Close.svg';
 
 const Navbar = () => {
+  const [toggleSidebar, settoggleSidebar] = useState(false);
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    settoggleSidebar(!toggleSidebar);
+  };
   return (
-    <header className='bg-gradient-to-b from-dark-secondary to-dark-bg fixed rounded-br-3xl rounded-bl-3xl flex py-4 h-64 w-full rounded z-50 md:h-28 '>
-      <div className='container flex justify-center items-center mx-auto align-items-center py-8'>
-        <div className='md:invisible bg-white flex justify-center items-center w-20 h-16 rounded-bl-3xl cursor-pointer fixed z-10 top-0 right-0'>
-          <Image src={Union} alt='menu' className='text-dark-bg' />
-        </div>
+    <header className='bg-gradient-to-b from-dark-secondary relative to-dark-bg md:fixed rounded-br-3xl rounded-bl-3xl flex md:py-4 p-0 h-0 w-full rounded z-50 md:h-28 '>
+      <div className='container flex justify-center items-center mx-auto align-items-center py-8 relative'>
+        <button
+          className='md:invisible bg-white flex justify-center items-center w-20 h-16 rounded-bl-3xl cursor-pointer fixed z-10 top-0 right-0'
+          onClick={handleClick}
+        >
+          {toggleSidebar ? (
+            <Image src={Close} alt='Open' className='text-dark-bg' />
+          ) : (
+            <Image src={Union} alt='Close' className='text-dark-bg' />
+          )}
+        </button>
         <div className='brand h-12 w-12 invisible md:visible lg:visible relative'>
           <Image
             src={PhotoProfil}
@@ -19,23 +34,27 @@ const Navbar = () => {
             objectFit='cover'
           />
         </div>
-        <nav className='absolute md:static lg:static h-full py-12 border-2 rounded-2xl w-full md:w-1/2 md:border-none'>
-          <ul className='flex w-96 md:w-full h-full justify-around flex-col md:flex-row lg:flex-row  items-center'>
-            <li className='block px-1'>
+        <nav
+          className={`${
+            toggleSidebar ? 'flex' : 'hidden'
+          }  fixed top-0 left-0 right-0 md:visible  md:flex md:static lg:static h-96 md:h-auto md:py-12 rounded-2xl md:w-1/2`}
+        >
+          <ul className='flex w-full md:w-full h-full md:h-auto justify-around bg-gradient-to-b from-dark-secondary  to-dark-bg md:bg-transparent md:from-transparent md:to-transparent flex-col md:flex-row lg:flex-row items-center py-10'>
+            <li className='block px-1' onClick={handleClick}>
               <Link href='/'>
                 <a className='text-white hover:text-cyan-light active:text-cyan-light font-bold md:font-semibold lg:font-semibold  transition-all ease-in delay-75'>
                   Home
                 </a>
               </Link>
             </li>
-            <li className='block px-1'>
+            <li className='block px-1' onClick={handleClick}>
               <Link href='#about' data-aos-anchor='#about'>
                 <a className='text-white hover:text-cyan-light active:text-cyan-light font-bold md:font-semibold lg:font-semibold  transition-all ease-in delay-75'>
                   About
                 </a>
               </Link>
             </li>
-            <li className='block px-2'>
+            <li className='block px-2' onClick={handleClick}>
               <Link href='#tech'>
                 <a
                   href='#tech'
@@ -45,7 +64,7 @@ const Navbar = () => {
                 </a>
               </Link>
             </li>
-            <li className='block px-2'>
+            <li className='block px-2' onClick={handleClick}>
               <Link href='#project'>
                 <a
                   href='#project'
@@ -55,7 +74,7 @@ const Navbar = () => {
                 </a>
               </Link>
             </li>
-            <li className='block px-2'>
+            <li className='block px-2' onClick={handleClick}>
               <Link href='#contact'>
                 <a
                   href='#contact'

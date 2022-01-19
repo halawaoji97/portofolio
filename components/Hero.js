@@ -13,10 +13,10 @@ const Hero = () => {
           data-aos-easing='ease-in'
           data-aos-mirror='true'
           data-aos-once='false'
-          className='bg-gradient-to-r from-dark-bg to-cyan-700  mx-auto md:order-1 hover:bg-grey-primary rounded-full w-48 md:w-80 md:h-80  lg:h-96 lg:w-96 shadow-lg transition-all duration-800 animate-pulse relative'
+          className='bg-gradient-to-r from-dark-bg to-cyan-700  mx-auto md:order-1 hover:bg-grey-primary rounded-full w-60 h-60 md:w-80 md:h-80  lg:h-96 lg:w-96 shadow-lg  relative'
         >
           <Image
-            data-aos='zoom-in'
+            data-aos='fade-in'
             data-aos-duration='700'
             data-aos-easing='ease-in'
             data-aos-mirror='true'
