@@ -39,7 +39,7 @@ const Project = () => {
                   />
                 </div>
                 <div
-                  data-aos='slide-left'
+                  data-aos='slide-right'
                   data-aos-duration={index * 700}
                   data-aos-easing='ease-in'
                   data-aos-mirror='true'

@@ -10,7 +10,7 @@ class MyDocument extends Document {
     return (
       <Html className='scroll-smooth'>
         <Head />
-        <body className='relative bg-gradient-to-br from-dark-bg to-dark-secondary tracking-wider'>
+        <body className='relative bg-gradient-to-br from-dark-bg to-dark-secondary tracking-wider overflow-x-hidden'>
           <Main />
           <NextScript />
         </body>
