@@ -1,7 +1,5 @@
-import Project1 from '../public/img/Oji bakery.png';
-import Project2 from '../public/img/garos.png';
-import Project3 from '../public/img/Shoot.png';
-import Image from 'next/image';
+import dataProject from '../data/data.json';
+import Link from 'next/link';
 
 const Project = () => {
   return (
@@ -22,66 +20,53 @@ const Project = () => {
           PROJECT
         </h3>
         <div className='grid my-12 grid-cols-1 grid-rows-3 md:grid-rows-1 gap-4 md:gap-6 md:grid-cols-3 lg:grid-cols-3 justify-center'>
-          <div
-            data-aos='zoom-in'
-            data-aos-duration='700'
-            data-aos-easing='ease-in'
-            data-aos-mirror='true'
-            data-aos-once='false'
-            className='shadow-lg bg-gradient-to-r  from-dark-bg to-cyan-700 rounded-2xl relative'
-          >
-            <div className='rounded-2xl relative'>
-              {/* <img src='../src/img/Oji bakery.png' alt='' className='rounded-2xl' /> */}
-              <Image
-                src={Project1}
-                alt='Project 1 | Oji Bakery'
-                className='h-full w-full'
-              />
-            </div>
-            <div className='bg-gradient-to-r  from-dark-bg to-cyan-700 rounded-bl-2xl hover:rounded-2xl rounded-tr-2xl absolute  text-center hover:w-full w-48 hover:h-full top-0 hover:bottom-0 hover:left-0 right-0 flex justify-center gap-4 items-center'>
-              <h6 className='text-cyan-light text-xl py-2'>Oji Bakery</h6>
-            </div>
-          </div>
-
-          <div
-            data-aos='zoom-in'
-            data-aos-duration='700'
-            data-aos-easing='ease-in'
-            data-aos-mirror='true'
-            data-aos-once='false'
-            className='bg-grey-primary rounded-2xl relative'
-          >
-            <div className='rounded-2xl relative'>
-              <Image
-                src={Project2}
-                alt='Project 2 | Garos'
-                className='h-full w-full rounded-2xl'
-              />
-            </div>
-            <div className='bg-gradient-to-r  from-dark-bg to-cyan-700 rounded-bl-2xl hover:rounded-2xl rounded-tr-2xl absolute  text-center hover:w-full w-48 hover:h-full top-0 hover:bottom-0 hover:left-0 right-0 flex justify-center gap-4 items-center'>
-              <h6 className='text-white text-xl py-2'>Garos</h6>
-            </div>
-          </div>
-
-          <div
-            data-aos='zoom-in'
-            data-aos-duration='700'
-            data-aos-easing='ease-in'
-            data-aos-mirror='true'
-            data-aos-once='false'
-            className='bg-grey-primary rounded-2xl relative'
-          >
-            <div className='rounded-2xl relative'>
-              <Image
-                src={Project3}
-                alt='Project 3 | Watch Movies'
-                className='h-full w-full rounded-2xl'
-              />
-            </div>
-            <div className='bg-gradient-to-r  from-dark-bg to-cyan-700 rounded-bl-2xl hover:rounded-2xl rounded-tr-2xl absolute  text-center hover:w-full w-48 hover:h-full top-0 hover:bottom-0 hover:left-0 right-0 flex justify-center gap-4 items-center'>
-              <h6 className='text-white text-xl py-2'>Watch Movie</h6>
-            </div>
-          </div>
+          {dataProject.project.map((item, index) => {
+            return (
+              <div
+                key={index}
+                data-aos='zoom-in'
+                data-aos-duration={index * 700}
+                data-aos-easing='ease-in'
+                data-aos-mirror='true'
+                data-aos-once='false'
+                className='shadow-lg bg-gradient-to-r group  from-dark-bg to-cyan-700 rounded-2xl transition-all origin-left duration-700 ease-out '
+              >
+                <div className='rounded-2xl  relative'>
+                  <img
+                    src={item.imageUrl}
+                    alt={item.name}
+                    className='h-full w-full rounded-2xl relative'
+                  />
+                </div>
+                <div
+                  data-aos='slide-left'
+                  data-aos-duration={index * 700}
+                  data-aos-easing='ease-in'
+                  data-aos-mirror='true'
+                  data-aos-once='false'
+                  className='bg-gradient-to-r from-dark-bg to-cyan-700 rounded-bl-2xl  rounded-tr-2xl  text-center w-48  absolute top-0 right-0 group-hover:hidden'
+                >
+                  <h6 className='text-cyan-light text-xl py-2'>{item.name}</h6>
+                </div>
+                <div className='bg-gradient-to-r from-dark-bg to-cyan-700 rounded-2xl  text-center flex justify-center items-center flex-col shadow-lg absolute top-0 right-0 bottom-0 left-0 w-full px-12 py-0 scale-y-0 group-hover:scale-y-100 transition-tansform ease-in duration-700 origin-top opacity-0 group-hover:opacity-100'>
+                  <h6 className='text-cyan-light uppercase text-xl py-2'>
+                    {item.name}
+                  </h6>
+                  <p className='text-cta-bg  md:text-l pb-6  font-normal '>
+                    {item.description}
+                  </p>
+                  <Link href={item.linkWesbsite}>
+                    <a
+                      target='_blank'
+                      className='bg-gradient-to-r from-main-hue to-cyan-light transition-all ease-in duration-0 hover:duration-700 hover:animate-pulse hover:from-cyan-light hover:to-main-hue text-white rounded-full py-3 px-12 md:ml-6 font-medium'
+                    >
+                      Visit
+                    </a>
+                  </Link>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

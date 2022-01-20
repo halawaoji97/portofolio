@@ -1,0 +1,44 @@
+{
+  "project": [
+    {
+      "name": "Bakery Store",
+      "imageUrl": "./img/Oji bakery.png",
+      "description": "online store with React js & redux",
+      "linkWesbsite": "https://watch-movies-with-pwa.netlify.app/"
+    },
+    {
+      "name": "Garos",
+      "imageUrl": "./img/garos.png",
+      "description": "a website for searching kost using MERN Stack",
+      "linkWesbsite": "https://garos.vercel.app/"
+    },
+    {
+      "name": "Watch Movies",
+      "imageUrl": "./img/Shoot.png",
+      "description": "consumption TMDb API with HTML CSS & PWA features",
+      "linkWesbsite": "https://watch-movies-with-pwa.netlify.app/"
+    }
+  ],
+  "navLink": [
+    {
+      "name": "Home",
+      "href": ""
+    },
+    {
+      "name": "About",
+      "href": "about"
+    },
+    {
+      "name": "Technology",
+      "href": "tech"
+    },
+    {
+      "name": "Project",
+      "href": "project"
+    },
+    {
+      "name": "Contact",
+      "href": "contact"
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import {
   FaFigma,
   FaJs,
@@ -50,7 +51,7 @@ const Tech = () => {
               data-aos-mirror='true'
               data-aos-once='false'
             >
-              <span className='text-cyan-light rounded-full transition-all ease-in duration-800 hover:animate-bounce bg-dark-bg flex justify-center items-center border-2 h-14 w-14 border-cyan-light  mr-4'>
+              <span className='text-cyan-light rounded-full transition-all ease-in duration-800 hover:animate-bounce bg-dark-bg flex justify-center items-center border-2 h-14 w-14 border-cyan-light  mr-4 relative'>
                 <FaCss3 size={32} />
               </span>
               <p className='font-medium text-cta-bg'>CSS</p>
