@@ -1,8 +1,9 @@
+import Link from 'next/link';
 import {
   FaInstagram,
-  FaWhatsapp,
   FaEnvelope,
   FaLinkedin,
+  FaFacebookF,
 } from 'react-icons/fa';
 
 const Footer = () => {
@@ -17,46 +18,58 @@ const Footer = () => {
         </h3>
       </div>
       <div className='flex justify-around w-64 md:w-96 mx-auto items-center py-6'>
-        <span
-          data-aos='fade-right'
-          data-aos-duration='700'
-          data-aos-easing='ease-in'
-          data-aos-mirror='true'
-          data-aos-once='false'
-          className='text-cyan-light rounded-full bg-dark-bg flex justify-center items-center border-2 h-10 w-10 border-cyan-light  mr-4'
-        >
-          <FaLinkedin size={24} />
-        </span>
-        <span
-          data-aos='fade-right'
-          data-aos-duration='700'
-          data-aos-easing='ease-in'
-          data-aos-mirror='true'
-          data-aos-once='false'
-          className='text-cyan-light rounded-full bg-dark-bg flex justify-center items-center border-2 h-10 w-10 border-cyan-light  mr-4'
-        >
-          <FaInstagram size={24} />
-        </span>
-        <span
-          data-aos='fade-left'
-          data-aos-duration='700'
-          data-aos-easing='ease-in'
-          data-aos-mirror='true'
-          data-aos-once='false'
-          className='text-cyan-light rounded-full bg-dark-bg flex justify-center items-center border-2 h-10 w-10 border-cyan-light  mr-4'
-        >
-          <FaEnvelope size={24} />
-        </span>
-        <span
-          data-aos='fade-left'
-          data-aos-duration='700'
-          data-aos-easing='ease-in'
-          data-aos-mirror='true'
-          data-aos-once='false'
-          className='text-cyan-light rounded-full bg-dark-bg flex justify-center items-center border-2 h-10 w-10 border-cyan-light  mr-4'
-        >
-          <FaWhatsapp size={24} />
-        </span>
+        <Link href='https://id.linkedin.com/in/ooziduhu-halawa-a64340207'>
+          <a
+            data-aos='fade-right'
+            data-aos-duration='700'
+            data-aos-easing='ease-in'
+            data-aos-mirror='true'
+            data-aos-once='false'
+            target='_blank'
+            className='text-cyan-light rounded-full bg-dark-bg flex justify-center items-center border-2 h-10 w-10 border-cyan-light  mr-4'
+          >
+            <FaLinkedin size={24} />
+          </a>
+        </Link>
+        <Link href='https://www.instagram.com/halawa_oji'>
+          <a
+            data-aos='fade-right'
+            data-aos-duration='700'
+            data-aos-easing='ease-in'
+            data-aos-mirror='true'
+            data-aos-once='false'
+            target='_blank'
+            className='text-cyan-light rounded-full bg-dark-bg flex justify-center items-center border-2 h-10 w-10 border-cyan-light  mr-4'
+          >
+            <FaInstagram size={24} />
+          </a>
+        </Link>
+        <Link href='mailto:ozidhalawa97@gmail.com'>
+          <a
+            data-aos='fade-left'
+            data-aos-duration='700'
+            data-aos-easing='ease-in'
+            data-aos-mirror='true'
+            data-aos-once='false'
+            target='_blank'
+            className='text-cyan-light rounded-full bg-dark-bg flex justify-center items-center border-2 h-10 w-10 border-cyan-light  mr-4'
+          >
+            <FaEnvelope size={24} />
+          </a>
+        </Link>
+        <Link href='https://www.facebook.com/ozid.halawa'>
+          <a
+            data-aos='fade-left'
+            data-aos-duration='700'
+            data-aos-easing='ease-in'
+            data-aos-mirror='true'
+            data-aos-once='false'
+            target='_blank'
+            className='text-cyan-light rounded-full bg-dark-bg flex justify-center items-center border-2 h-10 w-10 border-cyan-light  mr-4'
+          >
+            <FaFacebookF size={24} />
+          </a>
+        </Link>
       </div>
       <p className='copyright text-sm py-12 text-center text-cta-bg font-normal'>
         Copyright &copy; 2022 | built by Oji

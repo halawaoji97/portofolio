@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import PhotoProfil from '../public/img/profil_photo-removebg-preview.png';
 import DownloadIcon from '../public/img/download_icon.svg';
-import Link from 'next/link';
 
 const Hero = () => {
   const Mailto = ({ email, subject = '', body = '', children, className }) => {
@@ -88,15 +87,20 @@ const Hero = () => {
             data-aos-once='false'
             className='flex gap-4 justify-center md:items-stretch md:justify-start mt-12 md:mt-16'
           >
-            <button className='bg-cta-bg hover:bg-accent-bg flex items-center gap-1 text-sm rounded-full py-3 px-10 text-dark-bg font-medium transition-all ease-in duration-0 hover:duration-300 hover:animate-pulse'>
+            <a
+              href='https://drive.google.com/file/d/1uLhenQ9OXqLtee0SSe10C-y7DOvJ9YnW/view?usp=sharing'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='bg-cta-bg hover:bg-accent-bg flex items-center gap-1 text-sm rounded-full py-3 px-10 text-dark-bg font-medium transition-all ease-in duration-0 hover:duration-300 hover:animate-pulse'
+            >
               <Image className='inline' src={DownloadIcon} alt='dowload cv' />
               <span>CV</span>
-            </button>
+            </a>
             <Mailto
               className='bg-gradient-to-r from-main-hue to-cyan-light transition-all ease-in duration-0 hover:duration-700 hover:animate-pulse hover:from-cyan-light hover:to-main-hue text-white rounded-full py-3 px-12 md:ml-6 font-medium'
               email='ozidhalawa97@gmail.com'
               subject='Hiring'
-              body='Hello Oji,'
+              body='Hi Oji,'
             >
               Hire me!
             </Mailto>

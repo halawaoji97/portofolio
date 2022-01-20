@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 const About = () => {
   return (
     <section
@@ -28,12 +30,15 @@ const About = () => {
           programming especially <br /> the front end, <br />
           able to create time targets in working <br />
           on projects and enjoy working with a team.
-          <span className='my-2 block'>
-            <a className='text-sm text-tertiary-text underline' href=''>
-              visit me in Superprof
-            </a>
-          </span>
         </p>
+        <Link
+          href='https://www.superprof.co.id/dasbor.html'
+          className='my-2 block'
+        >
+          <a className='text-sm text-blue-300 underline' target='_blank'>
+            visit me in Superprof
+          </a>
+        </Link>
       </div>
     </section>
   );
