@@ -37,8 +37,8 @@ const Navbar = () => {
         </div>
         <nav
           className={`${
-            toggleSidebar ? 'flex' : 'hidden'
-          }  fixed top-0 left-0 right-0 md:visible  md:flex md:static lg:static h-96 md:h-auto md:py-12 rounded-2xl md:w-1/2`}
+            toggleSidebar ? 'scale-x-100' : 'scale-x-0'
+          }  fixed top-0 left-0 right-0 flex scale-x-0 transition-tansform ease-in duration-700 origin-top-right md:scale-x-100 lg:scale-x-100 md:visible  md:flex md:static lg:static h-96 md:h-auto md:py-12 rounded-2xl md:w-1/2`}
         >
           <ul className='flex w-full md:w-full h-full md:h-auto justify-around bg-gradient-to-b from-dark-secondary  to-dark-bg md:bg-transparent md:from-transparent md:to-transparent flex-col md:flex-row lg:flex-row items-center py-10'>
             {dataProject.navLink.map((item, index) => {

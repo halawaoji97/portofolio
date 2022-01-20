@@ -1,9 +1,25 @@
 import Image from 'next/image';
-import React from 'react';
 import PhotoProfil from '../public/img/profil_photo-removebg-preview.png';
 import DownloadIcon from '../public/img/download_icon.svg';
+import Link from 'next/link';
 
 const Hero = () => {
+  const Mailto = ({ email, subject = '', body = '', children, className }) => {
+    let params = subject || body ? '?' : '';
+    if (subject) params += `subject=${encodeURIComponent(subject)}`;
+    if (body) params += `${subject ? '&' : ''}body=${encodeURIComponent(body)}`;
+
+    return (
+      <a
+        target='_blank'
+        href={`mailto:${email}${params}`}
+        className={className}
+      >
+        {children}
+      </a>
+    );
+  };
+
   return (
     <section className=' md:py-32 lg:py-32  rounded-br-3xl rounded-bl-3xl'>
       <div className='container mx-auto grid grid-cols-1 md:grid-cols-2 gap-2 justify-center md:justify-between items-center py-10'>
@@ -50,6 +66,7 @@ const Hero = () => {
           >
             Front End Developer
           </span>
+
           <p
             data-aos='fade-in'
             data-aos-duration='700'
@@ -75,9 +92,14 @@ const Hero = () => {
               <Image className='inline' src={DownloadIcon} alt='dowload cv' />
               <span>CV</span>
             </button>
-            <button className='bg-gradient-to-r from-main-hue to-cyan-light transition-all ease-in duration-0 hover:duration-700 hover:animate-pulse hover:from-cyan-light hover:to-main-hue text-white rounded-full py-3 px-12 md:ml-6 font-medium'>
-              Hire Me
-            </button>
+            <Mailto
+              className='bg-gradient-to-r from-main-hue to-cyan-light transition-all ease-in duration-0 hover:duration-700 hover:animate-pulse hover:from-cyan-light hover:to-main-hue text-white rounded-full py-3 px-12 md:ml-6 font-medium'
+              email='ozidhalawa97@gmail.com'
+              subject='Hiring'
+              body='Hello Oji,'
+            >
+              Hire me!
+            </Mailto>
           </div>
         </div>
       </div>
