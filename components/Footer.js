@@ -1,10 +1,5 @@
 import Link from 'next/link';
-import {
-  FaInstagram,
-  FaEnvelope,
-  FaLinkedin,
-  FaFacebookF,
-} from 'react-icons/fa';
+import { FaInstagram, FaLinkedin, FaFacebookF, FaGithub } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -44,7 +39,7 @@ const Footer = () => {
             <FaInstagram size={24} />
           </a>
         </Link>
-        <Link href='mailto:ozidhalawa97@gmail.com'>
+        <Link href='https://github.com/halawaoji97'>
           <a
             data-aos='fade-left'
             data-aos-duration='700'
@@ -54,7 +49,7 @@ const Footer = () => {
             target='_blank'
             className='text-cyan-light rounded-full bg-dark-bg flex justify-center items-center border-2 h-10 w-10 border-cyan-light  mr-4'
           >
-            <FaEnvelope size={24} />
+            <FaGithub size={24} />
           </a>
         </Link>
         <Link href='https://www.facebook.com/ozid.halawa'>
