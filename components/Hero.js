@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import PhotoProfil from '../public/img/profil_photo-removebg-preview.png';
 import DownloadIcon from '../public/img/download_icon.svg';
+import Link from 'next/link';
 
 const Hero = () => {
   const Mailto = ({ email, subject = '', body = '', children, className }) => {
@@ -9,13 +10,11 @@ const Hero = () => {
     if (body) params += `${subject ? '&' : ''}body=${encodeURIComponent(body)}`;
 
     return (
-      <a
-        target='_blank'
-        href={`mailto:${email}${params}`}
-        className={className}
-      >
-        {children}
-      </a>
+      <Link href={`mailto:${email}${params}`}>
+        <a target='_blank' className={className}>
+          {children}
+        </a>
+      </Link>
     );
   };
 
@@ -87,15 +86,15 @@ const Hero = () => {
             data-aos-once='false'
             className='flex gap-4 justify-center md:items-stretch md:justify-start mt-12 md:mt-16'
           >
-            <a
-              href='https://drive.google.com/file/d/1oSyU3LYJNkn9VEeSKMBadLvZkEBZF5I-/view?usp=sharing'
-              target='_blank'
-              rel='noopener'
-              className='bg-cta-bg hover:bg-accent-bg flex items-center gap-1 text-sm rounded-full py-3 px-10 text-dark-bg font-medium transition-all ease-in duration-0 hover:duration-300 hover:animate-pulse'
-            >
-              <Image className='inline' src={DownloadIcon} alt='dowload cv' />
-              <span>CV</span>
-            </a>
+            <Link href='https://drive.google.com/file/d/1oSyU3LYJNkn9VEeSKMBadLvZkEBZF5I-/view?usp=sharing'>
+              <a
+                target='_blank'
+                className='bg-cta-bg hover:bg-accent-bg flex items-center gap-1 text-sm rounded-full py-3 px-10 text-dark-bg font-medium transition-all ease-in duration-0 hover:duration-300 hover:animate-pulse'
+              >
+                <Image className='inline' src={DownloadIcon} alt='dowload cv' />
+                <span>CV</span>
+              </a>
+            </Link>
             <Mailto
               className='bg-gradient-to-r from-main-hue to-cyan-light transition-all ease-in duration-0 hover:duration-700 hover:animate-pulse hover:from-cyan-light hover:to-main-hue text-white rounded-full py-3 px-12 md:ml-6 font-medium'
               email='ozidhalawa97@gmail.com'
