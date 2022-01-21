@@ -51,7 +51,7 @@ const Hero = () => {
             data-aos-once='false'
             className='text-4xl md:text-6xl py-4 font-bold bg-clip-text text-transparent bg-gradient-to-l from-cyan-light to-main-hue'
           >
-            hello, I'M OJI
+            hello, I&apos;M OJI
           </h1>
 
           <span
@@ -88,9 +88,9 @@ const Hero = () => {
             className='flex gap-4 justify-center md:items-stretch md:justify-start mt-12 md:mt-16'
           >
             <a
-              href='https://drive.google.com/file/d/1uLhenQ9OXqLtee0SSe10C-y7DOvJ9YnW/view?usp=sharing'
+              href='https://drive.google.com/file/d/1oSyU3LYJNkn9VEeSKMBadLvZkEBZF5I-/view?usp=sharing'
               target='_blank'
-              rel='noopener noreferrer'
+              rel='noopener'
               className='bg-cta-bg hover:bg-accent-bg flex items-center gap-1 text-sm rounded-full py-3 px-10 text-dark-bg font-medium transition-all ease-in duration-0 hover:duration-300 hover:animate-pulse'
             >
               <Image className='inline' src={DownloadIcon} alt='dowload cv' />
