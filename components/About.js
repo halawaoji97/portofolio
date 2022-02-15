@@ -22,23 +22,12 @@ const About = () => {
           className='text-cta-bg  md:text-xl py-6 px-6 font-normal'
           data-aos='zoom-in'
           data-aos-duration='700'
-          data-aos-easing='ease-in'
-          data-aos-mirror='true'
-          data-aos-once='false'
         >
           experienced in teaching people who are <br /> learning about
           programming especially <br /> the front end, <br />
           able to create time targets in working <br />
           on projects and enjoy working with a team.
         </p>
-        <Link
-          href='https://www.superprof.co.id/dasbor.html'
-          className='my-2 block'
-        >
-          <a className='text-sm text-blue-300 underline' target='_blank'>
-            visit me in Superprof
-          </a>
-        </Link>
       </div>
     </section>
   );

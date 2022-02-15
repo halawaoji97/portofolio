@@ -17,10 +17,6 @@ const Tech = () => {
       data-aos-offset='200'
       data-aos-delay='50'
       data-aos-duration='1000'
-      data-aos-easing='ease-in-out'
-      data-aos-mirror='true'
-      data-aos-once='false'
-      data-aos-anchor-placement='center'
       id='tech'
       className=' leading-relaxed tracking-wider flex justify-center items-center md:h-screen'
     >
@@ -34,9 +30,6 @@ const Tech = () => {
               className='flex items-center my-4'
               data-aos='fade-right'
               data-aos-duration='700'
-              data-aos-easing='ease-in'
-              data-aos-mirror='true'
-              data-aos-once='false'
             >
               <span className='text-cyan-light rounded-full transition-all ease-in duration-800 hover:animate-bounce bg-dark-bg flex justify-center items-center border-2 h-14 w-14 border-cyan-light  mr-4'>
                 <FaHtml5 size={32} />
@@ -47,9 +40,6 @@ const Tech = () => {
               className='flex items-center my-4'
               data-aos='fade-right'
               data-aos-duration='700'
-              data-aos-easing='ease-in'
-              data-aos-mirror='true'
-              data-aos-once='false'
             >
               <span className='text-cyan-light rounded-full transition-all ease-in duration-800 hover:animate-bounce bg-dark-bg flex justify-center items-center border-2 h-14 w-14 border-cyan-light  mr-4 relative'>
                 <FaCss3 size={32} />
@@ -60,9 +50,6 @@ const Tech = () => {
               className='flex items-center my-4'
               data-aos='fade-right'
               data-aos-duration='700'
-              data-aos-easing='ease-in'
-              data-aos-mirror='true'
-              data-aos-once='false'
             >
               <span className='text-cyan-light rounded-full transition-all ease-in duration-800 hover:animate-bounce bg-dark-bg flex justify-center items-center border-2 h-14 w-14 border-cyan-light  mr-4'>
                 <FaJs size={32} />
@@ -73,9 +60,6 @@ const Tech = () => {
               className='flex items-center my-4'
               data-aos='fade-right'
               data-aos-duration='700'
-              data-aos-easing='ease-in'
-              data-aos-mirror='true'
-              data-aos-once='false'
             >
               <span className='text-cyan-light rounded-full transition-all ease-in duration-800 hover:animate-bounce bg-dark-bg flex justify-center items-center border-2 h-14 w-14 border-cyan-light  mr-4'>
                 <FaBootstrap size={32} />
@@ -89,9 +73,6 @@ const Tech = () => {
               className='flex items-center my-4'
               data-aos='fade-left'
               data-aos-duration='700'
-              data-aos-easing='ease-in'
-              data-aos-mirror='true'
-              data-aos-once='false'
             >
               <span className='text-cyan-light rounded-full transition-all ease-in duration-800 hover:animate-bounce bg-dark-bg flex justify-center items-center border-2 h-14 w-14 border-cyan-light  mr-4'>
                 <SiTailwindcss size={32} />
@@ -102,9 +83,6 @@ const Tech = () => {
               className='flex items-center my-4'
               data-aos='fade-left'
               data-aos-duration='700'
-              data-aos-easing='ease-in'
-              data-aos-mirror='true'
-              data-aos-once='false'
             >
               <span className='text-cyan-light rounded-full transition-all ease-in duration-800 hover:animate-bounce bg-dark-bg flex justify-center items-center border-2 h-14 w-14 border-cyan-light  mr-4'>
                 <FaFigma size={32} />
@@ -115,9 +93,6 @@ const Tech = () => {
               className='flex items-center my-4'
               data-aos='fade-left'
               data-aos-duration='700'
-              data-aos-easing='ease-in'
-              data-aos-mirror='true'
-              data-aos-once='false'
             >
               <span className='text-cyan-light rounded-full transition-all ease-in duration-800 hover:animate-bounce bg-dark-bg flex justify-center items-center border-2 h-14 w-14 border-cyan-light  mr-4'>
                 <FaReact size={32} />
@@ -128,9 +103,6 @@ const Tech = () => {
               className='flex items-center my-4'
               data-aos='fade-left'
               data-aos-duration='700'
-              data-aos-easing='ease-in'
-              data-aos-mirror='true'
-              data-aos-once='false'
             >
               <span className='text-cyan-light rounded-full transition-all ease-in duration-800 hover:animate-bounce bg-dark-bg flex justify-center items-center border-2 h-14 w-14 border-cyan-light  mr-4'>
                 <FaGithub size={32} />

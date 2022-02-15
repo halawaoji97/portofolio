@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-import PhotoProfil from '../public/img/Group 36.png';
-import Union from '../public/img/Union.png';
+import PhotoProfil from '../public/img/profil_photo-removebg-preview.png';
 import Close from '../public/img/Close.svg';
+import Menu from '../public/img/Union.svg';
 import dataProject from '../data/data.json';
 
 const Navbar = () => {
@@ -22,9 +22,9 @@ const Navbar = () => {
           onClick={handleClick}
         >
           {toggleSidebar ? (
-            <Image src={Close} alt='Open' className='text-dark-bg' />
+            <Image src={Close} alt='Close' className='text-dark-bg' />
           ) : (
-            <Image src={Union} alt='Close' className='text-dark-bg' />
+            <Image src={Menu} alt='Menu' height={30} width={30} />
           )}
         </button>
         <Link href='/'>

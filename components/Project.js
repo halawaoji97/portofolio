@@ -1,17 +1,13 @@
 import dataProject from '../data/data.json';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Project = () => {
   return (
     <section
       data-aos='fade'
       data-aos-offset='200'
-      data-aos-delay='50'
       data-aos-duration='1000'
-      data-aos-easing='ease-in-out'
-      data-aos-mirror='true'
-      data-aos-once='false'
-      data-aos-anchor-placement='center'
       id='project'
       className='md:h-screen justify-center items-center flex'
     >
@@ -26,24 +22,18 @@ const Project = () => {
                 key={index}
                 data-aos='zoom-in'
                 data-aos-duration={index * 700}
-                data-aos-easing='ease-in'
-                data-aos-mirror='true'
-                data-aos-once='false'
-                className='shadow-lg bg-gradient-to-r group  from-dark-bg to-cyan-700 rounded-2xl transition-all origin-left duration-700 ease-out '
+                className='shadow-lg bg-gradient-to-r group  from-dark-bg to-cyan-700 rounded-2xl transition-all origin-left duration-700 ease-out relative'
               >
                 <div className='rounded-2xl  relative'>
                   <img
-                    src={item.imageUrl}
+                    src={`/img/${item.imageUrl}`}
                     alt={item.name}
-                    className='h-full w-full rounded-2xl relative'
+                    className='h-full w-full rounded-2xl '
                   />
                 </div>
                 <div
                   data-aos='slide-right'
                   data-aos-duration={index * 700}
-                  data-aos-easing='ease-in'
-                  data-aos-mirror='true'
-                  data-aos-once='false'
                   className='bg-gradient-to-r from-dark-bg to-cyan-700 rounded-bl-2xl  rounded-tr-2xl  text-center w-48  absolute top-0 right-0 group-hover:hidden'
                 >
                   <h6 className='text-cyan-light text-xl py-2'>{item.name}</h6>

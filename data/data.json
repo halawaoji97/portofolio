@@ -2,19 +2,19 @@
   "project": [
     {
       "name": "Bakery Store",
-      "imageUrl": "./img/Oji bakery.png",
+      "imageUrl": "Oji bakery-min.png",
       "description": "online store with React js & redux",
       "linkWesbsite": "https://github.com/halawaoji97/oji_bakery"
     },
     {
       "name": "Garos",
-      "imageUrl": "./img/garos.png",
+      "imageUrl": "garos-min.png",
       "description": "a website for searching kost using MERN Stack",
       "linkWesbsite": "https://garos.vercel.app/"
     },
     {
       "name": "Watch Movies",
-      "imageUrl": "./img/Shoot.png",
+      "imageUrl": "Shoot-min.png",
       "description": "consumption TMDb API with HTML CSS & PWA features",
       "linkWesbsite": "https://watch-movies-with-pwa.netlify.app/"
     }
